@@ -9,7 +9,6 @@ interface SectionHeadingProps {
   className?: string
 }
 
-/** Centred section title + supporting copy. */
 export default function SectionHeading({
   title,
   description,

@@ -4,7 +4,6 @@ import { cn } from '@/utils/cn'
 
 interface LogoProps {
   tone?: 'light' | 'dark'
-  /** The auth pages show the mark on its own. */
   showWordmark?: boolean
   className?: string
 }

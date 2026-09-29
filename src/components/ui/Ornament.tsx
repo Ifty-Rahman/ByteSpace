@@ -7,7 +7,6 @@ const TINTS = {
   white: 'bg-shuttle-gray-50',
 } as const
 
-/** Image bleed inside each frame, as exported from Figma (top, right, bottom, left). */
 const BLEED: Record<NonNullable<OrnamentConfig['shape']>, CSSProperties> = {
   frame: { top: '0%', right: '0.47%', bottom: '-0.47%', left: '-0.93%' },
   cone: { top: '-0.22%', right: '0.56%', bottom: '-0.28%', left: '-1.05%' },
@@ -17,11 +16,6 @@ interface OrnamentProps extends OrnamentConfig {
   className?: string
 }
 
-/**
- * Decorative 3D shape. A neutral render is tinted by laying a colour over it
- * (clipped to the shape's silhouette) with a hard-light blend — the same
- * technique the Figma file uses.
- */
 export default function Ornament({
   image,
   mask,

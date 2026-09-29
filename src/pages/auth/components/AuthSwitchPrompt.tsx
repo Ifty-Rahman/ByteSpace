@@ -8,7 +8,6 @@ interface AuthSwitchPromptProps {
   className?: string
 }
 
-/** "Already have an account? Login" style prompt linking to the other auth page. */
 export default function AuthSwitchPrompt({ question, linkLabel, to, className }: AuthSwitchPromptProps) {
   return (
     <p className={cn('text-center text-base leading-[1.6]', className)}>

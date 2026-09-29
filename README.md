@@ -1,7 +1,7 @@
 # ByteSpace
 
 Landing page for the ByteSpace course platform, built from the
-[Figma design](https://www.figma.com/design/gugkuk8ZaQJomyrdmqvsPn/ByteSpace-website) with
+[Figma design](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1&p=f&t=eQOrqJmq6rMG5b6L-0) with
 React, TypeScript, Vite and Tailwind CSS v4.
 
 The page is static for now: there's no search, filtering or form logic yet.
@@ -67,12 +67,3 @@ are available as regular utilities, e.g. `bg-persian-blue-800`, `text-electric-l
 
 Fonts: **Poppins** (Google Fonts), **Satoshi** and **Clash Display** (Fontshare), loaded in
 `index.html`.
-
-### Layout notes
-
-- The design is a 1440px desktop layout with a 1200px content column (`Container`).
-- Decorative artwork (3D shapes, glows, hero photo) is positioned with the exact Figma
-  coordinates inside `DesignCanvas`, a 1440px layer centred in each section.
-- The 3D shapes are tinted like in Figma: a neutral render with a colour layer on top,
-  clipped to the shape's silhouette and blended with `mix-blend-mode: hard-light`
-  (`components/ui/Ornament.tsx`).

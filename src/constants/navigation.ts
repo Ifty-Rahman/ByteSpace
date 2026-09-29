@@ -3,9 +3,7 @@ import type { FooterColumn } from '@/types'
 
 export interface NavItem {
   label: string
-  /** In-app route (TanStack Router). */
   to?: LinkProps['to']
-  /** In-page anchor or external URL. */
   href?: string
 }
 

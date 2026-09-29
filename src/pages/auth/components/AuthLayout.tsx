@@ -5,17 +5,11 @@ import Logo from '@/components/ui/Logo'
 import AuthShowcase from './AuthShowcase'
 
 interface AuthLayoutProps {
-  /** Short intro shown top-left, e.g. "Sign in with ease". */
   introTitle: string
   introText: string
-  /** The form panel. */
   children: ReactNode
 }
 
-/**
- * Shared frame for the sign-in / sign-up pages: blue grid backdrop, intro + showcase, form panel.
- * Matches the 1440 × 1024 Figma frame; on larger screens the blue grid keeps going to the edges.
- */
 export default function AuthLayout({ introTitle, introText, children }: AuthLayoutProps) {
   return (
     <div className="relative min-h-screen min-w-[1280px] overflow-hidden bg-persian-blue-800">

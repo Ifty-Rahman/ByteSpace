@@ -32,7 +32,6 @@ export interface Stat {
 }
 
 export interface FooterColumn {
-  /** Column title — present in the design but visually hidden (transparent text). */
   title?: string
   links: string[]
 }
@@ -43,12 +42,9 @@ export interface OrnamentConfig {
   image: string
   mask: string
   tint: OrnamentTint
-  /** Size of the square frame in px. */
   size: number
-  /** Position within the 1440px design canvas. */
   left: number
   top: number
-  /** Figma's "Cone" frames use a slightly different image bleed than plain frames. */
   shape?: 'frame' | 'cone'
   flipped?: boolean
 }

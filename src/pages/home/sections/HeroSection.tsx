@@ -13,7 +13,6 @@ export default function HeroSection() {
     <section className="relative h-[1024px] overflow-hidden bg-persian-blue-800">
       <GridBackdrop />
 
-      {/* Lime ring behind the hero photo */}
       <DesignCanvas>
         <img
           src={assets.decor.heroRing}
@@ -35,7 +34,6 @@ export default function HeroSection() {
         <SearchBar />
       </div>
 
-      {/* Hero artwork — coordinates match the 1440px Figma frame */}
       <DesignCanvas className="z-10">
         <img
           src={assets.images.heroStudent}

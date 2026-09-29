@@ -10,9 +10,7 @@ import TestimonialsSection from './sections/TestimonialsSection'
 
 export default function HomePage() {
   return (
-    // Built for the 1440px desktop design; narrower windows scroll horizontally.
     <div className="relative min-w-[1280px] overflow-x-clip">
-      {/* The header sits on top of the hero */}
       <Header />
       <main>
         <HeroSection />

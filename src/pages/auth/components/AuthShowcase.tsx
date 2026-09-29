@@ -5,7 +5,6 @@ import { showcaseCourses, showcaseOrnaments } from '../data'
 
 const [backCourse, frontCourse] = showcaseCourses
 
-/** Decorative collage of course cards and 3D shapes shown next to the auth forms. */
 export default function AuthShowcase() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0">

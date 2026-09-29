@@ -1,7 +1,3 @@
-/**
- * Static asset paths (served from /public/assets).
- * Run `npm run assets` once to download the Figma exports into that folder.
- */
 const root = '/assets'
 
 export const assets = {
@@ -26,7 +22,6 @@ export const assets = {
     categoryPhotography: `${root}/icons/category-photography.svg`,
   },
   decor: {
-    /** 1440 × 1024 line grid used on every blue area (see GridBackdrop). */
     grid: `${root}/decor/grid.svg`,
     heroRing: `${root}/decor/hero-ring.svg`,
     glowBlueA: `${root}/decor/glow-blue-a.svg`,
