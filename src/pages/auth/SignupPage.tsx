@@ -6,7 +6,6 @@ import AuthLayout from './components/AuthLayout'
 import AuthSwitchPrompt from './components/AuthSwitchPrompt'
 
 export default function SignupPage() {
-  // UI only for now — account creation isn't wired up yet.
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => event.preventDefault()
 
   return (

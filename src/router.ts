@@ -7,7 +7,6 @@ export const router = createRouter({
   scrollRestoration: true,
 })
 
-// Makes route paths, params and search params type-safe across the app.
 declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router

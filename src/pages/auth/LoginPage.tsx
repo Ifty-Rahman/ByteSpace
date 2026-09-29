@@ -7,7 +7,6 @@ import AuthSwitchPrompt from './components/AuthSwitchPrompt'
 import SocialSignIn from './components/SocialSignIn'
 
 export default function LoginPage() {
-  // UI only for now — signing in isn't wired up yet.
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => event.preventDefault()
 
   return (

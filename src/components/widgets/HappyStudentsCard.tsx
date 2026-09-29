@@ -5,9 +5,7 @@ import { cn } from '@/utils/cn'
 import FloatingCard from './FloatingCard'
 
 interface HappyStudentsCardProps {
-  /** The hero uses a slightly larger rating line than the other placements. */
   variant?: 'hero' | 'compact'
-  /** `accent` is the lime card used on the auth pages. */
   tone?: 'light' | 'accent'
   className?: string
 }

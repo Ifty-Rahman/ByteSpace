@@ -14,7 +14,6 @@ interface FloatingCardProps {
   style?: CSSProperties
 }
 
-/** Small rounded info card that floats over the hero / feature imagery. */
 export default function FloatingCard({ children, tone = 'light', className, style }: FloatingCardProps) {
   return (
     <div

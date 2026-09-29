@@ -2,10 +2,8 @@ import { assets } from '@/constants/assets'
 import { getCourse } from '@/data/courses'
 import type { OrnamentConfig } from '@/types'
 
-/** Course cards stacked in the showcase (back card first). */
 export const showcaseCourses = [getCourse('digital-asset'), getCourse('big-data')]
 
-/** 3D shapes around the showcase — positions are relative to the showcase column. */
 export const showcaseOrnaments: OrnamentConfig[] = [
   {
     image: assets.ornaments.springB,

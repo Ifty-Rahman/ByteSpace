@@ -1,7 +1,6 @@
 import { cn } from '@/utils/cn'
 
 interface ProgressBarProps {
-  /** 0–100 */
   value: number
   trackClassName?: string
 }

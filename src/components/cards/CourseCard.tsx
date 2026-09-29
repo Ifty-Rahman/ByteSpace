@@ -21,11 +21,8 @@ const TEXT_STYLES = {
 
 interface CourseCardProps {
   course: Course
-  /** Colour of the trailing "26+" learners bubble. */
   learnersTone?: 'lime' | 'blue' | 'black'
-  /** Outlined grey star (home) or filled lime star (auth showcase). */
   ratingStar?: 'outline' | 'filled'
-  /** `relaxed` uses the roomier 20/28px line heights of the feature and auth placements. */
   variant?: keyof typeof TEXT_STYLES
   className?: string
 }

@@ -5,7 +5,6 @@ const providers = [
   { name: 'Google', icon: assets.icons.google },
 ]
 
-/** "or" divider followed by the social sign-in buttons. */
 export default function SocialSignIn({ className }: { className?: string }) {
   return (
     <div className={className}>

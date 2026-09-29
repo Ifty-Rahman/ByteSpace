@@ -16,7 +16,7 @@
   font-display: swap;
 }
 
-/* Satoshi — body text & labels */
+/* Satoshi */
 @font-face {
   font-family: 'Satoshi';
   src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
@@ -39,10 +39,7 @@
   font-display: swap;
 }
 
-/*
- * Design tokens — taken from the ByteSpace Figma file (styles & variables).
- * Colour names mirror the Figma palette so designers and devs speak the same language.
- */
+/* Design tokens */
 @theme {
   /* Typefaces */
   --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
@@ -121,7 +118,7 @@
   --container-page: 1200px;
 }
 
-/* "A" effect style from Figma — soft, layered shadow that follows the cut-out photos' shape. */
+/* shadow effect */
 @utility shadow-photo {
   filter: drop-shadow(0.5px 0.7px 1.5px rgb(0 0 0 / 0.04))
     drop-shadow(5.4px 7.7px 4.8px rgb(0 0 0 / 0.07))

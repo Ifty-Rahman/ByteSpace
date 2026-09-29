@@ -1,11 +1,6 @@
 import { assets } from '@/constants/assets'
 import { cn } from '@/utils/cn'
 
-/**
- * The 120px line grid used on every blue area (hero, creator banner, auth pages).
- * It's always the Figma frame size — 1440 × 1024 — centred horizontally and pinned to the
- * top of its (relatively positioned, overflow-hidden) parent.
- */
 export default function GridBackdrop({ className }: { className?: string }) {
   return (
     <img

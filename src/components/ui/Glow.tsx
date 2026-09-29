@@ -5,7 +5,6 @@ interface GlowProps {
   size: number
 }
 
-/** Blurred colour blob. The exported SVG includes a 40px margin for the blur. */
 const BLUR_BLEED = 40
 
 export default function Glow({ src, left, top, size }: GlowProps) {

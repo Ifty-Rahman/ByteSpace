@@ -4,7 +4,6 @@ import { accountNav, primaryNav, type NavItem } from '@/constants/navigation'
 import Logo from '@/components/ui/Logo'
 import Container from './Container'
 
-/** Renders a route link for `to`, a plain anchor for `href`. */
 function NavLink({ item, className }: { item: NavItem; className?: string }) {
   if (item.to) {
     return (
@@ -38,7 +37,6 @@ export default function Header() {
           <ul className="flex items-start gap-6 whitespace-nowrap text-shuttle-gray-50">
             {primaryNav.map((item) => (
               <li key={item.label}>
-                {/* The current page is shown in the medium weight, as in the design. */}
                 <NavLink
                   item={item}
                   className="text-base leading-[1.6] aria-[current=page]:text-label-m aria-[current=page]:font-medium"

@@ -3,7 +3,6 @@ import { cn } from '@/utils/cn'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
-/** Primary lime pill button. */
 export default function Button({ className, type = 'button', ...props }: ButtonProps) {
   return (
     <button

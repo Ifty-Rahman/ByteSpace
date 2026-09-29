@@ -42,7 +42,6 @@ export default function Footer() {
           <nav aria-label="Footer" className="flex w-[580px] items-end gap-10">
             {footerColumns.map((column, index) => (
               <div key={column.title ?? index} className="flex w-[167px] flex-col gap-6">
-                {/* Column titles exist in the design but are rendered transparent. */}
                 {column.title && <h3 className="text-body-m text-transparent">{column.title}</h3>}
                 <ul className="flex flex-col gap-4 text-body-s whitespace-nowrap">
                   {column.links.map((link) => (

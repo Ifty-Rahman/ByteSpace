@@ -6,9 +6,7 @@ import type {
   Testimonial,
 } from '@/types'
 
-/* ------------------------------------------------------------------ */
-/* Partners                                                            */
-/* ------------------------------------------------------------------ */
+/* Partners */
 
 export const partners = assets.partners.map((src, i) => ({
   src,
@@ -16,11 +14,8 @@ export const partners = assets.partners.map((src, i) => ({
   height: i === 4 ? 42 : 41,
 }))
 
-/* ------------------------------------------------------------------ */
-/* Courses                                                             */
-/* ------------------------------------------------------------------ */
+/* Courses */
 
-/** Topic filters, grouped by the row they sit on in the design. */
 export const courseTopicRows: string[][] = [
   [
     'Featured',
@@ -45,10 +40,7 @@ export const courseTopicRows: string[][] = [
 
 export const activeTopic = 'Featured'
 
-
-/* ------------------------------------------------------------------ */
-/* Categories                                                          */
-/* ------------------------------------------------------------------ */
+/* Categories */
 
 export const categories: Category[] = [
   { label: 'Design', icon: assets.icons.categoryDesign },
@@ -59,9 +51,7 @@ export const categories: Category[] = [
   { label: 'Photography', icon: assets.icons.categoryPhotography },
 ]
 
-/* ------------------------------------------------------------------ */
-/* Professional growth / creators                                      */
-/* ------------------------------------------------------------------ */
+/* Professional growth / creators */
 
 export const growthStats: Stat[] = [
   { value: '12K', label: 'Students' },
@@ -76,9 +66,7 @@ export const creatorBenefits: string[] = [
   'Build a Community',
 ]
 
-/* ------------------------------------------------------------------ */
-/* Testimonials                                                        */
-/* ------------------------------------------------------------------ */
+/* Testimonials */
 
 export const testimonials: Testimonial[] = [
   {
@@ -104,9 +92,7 @@ export const testimonials: Testimonial[] = [
   },
 ]
 
-/* ------------------------------------------------------------------ */
-/* 3D ornaments — positions are in the 1440px-wide design canvas.      */
-/* ------------------------------------------------------------------ */
+/* 3D ornaments */
 
 const { ornaments: o, ornamentMasks: m } = assets
 

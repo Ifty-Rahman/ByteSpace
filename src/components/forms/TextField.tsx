@@ -5,7 +5,6 @@ interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string
 }
 
-/** Labelled text input used across forms. Any native input prop is passed through. */
 export default function TextField({ label, id, className, ...inputProps }: TextFieldProps) {
   const generatedId = useId()
   const inputId = id ?? generatedId

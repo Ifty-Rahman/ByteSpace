@@ -3,11 +3,9 @@ import { cn } from '@/utils/cn'
 
 interface StarIconProps {
   tone?: 'lime' | 'blue'
-  /** Size of the square icon box, e.g. `size-4`. */
   className?: string
 }
 
-/** Filled rating star. The glyph sits inside its box with the same padding as the Figma icon. */
 export default function StarIcon({ tone = 'lime', className = 'size-4' }: StarIconProps) {
   return (
     <span className={cn('relative shrink-0', className)} aria-hidden>

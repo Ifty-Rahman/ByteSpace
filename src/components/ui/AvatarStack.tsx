@@ -9,15 +9,10 @@ const MORE_TONES = {
 
 interface AvatarStackProps {
   avatars: readonly string[]
-  /** Avatar diameter in px. */
   size: number
-  /** How much each avatar overlaps the next, in px. */
   overlap: number
-  /** Text in the trailing "more" bubble, e.g. "2K+". */
   moreLabel: string
-  /** Colour of the "more" bubble. */
   moreTone?: keyof typeof MORE_TONES
-  /** Typography for the "more" label. */
   moreClassName?: string
 }
 

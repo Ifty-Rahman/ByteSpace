@@ -1,7 +1,6 @@
 import { assets } from '@/constants/assets'
 import type { Course } from '@/types'
 
-/** Course catalogue shared across pages (home, auth showcase, future course pages). */
 const courseDefaults = {
   author: 'purepearl studio',
   lessons: '17 Lessons',
