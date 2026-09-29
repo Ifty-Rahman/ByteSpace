@@ -1,8 +1,8 @@
 # ByteSpace
 
-Landing page for the ByteSpace course platform, built from the
+Landing page along with login and signup page for the ByteSpace course platform, built from the
 [Figma design](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1&p=f&t=eQOrqJmq6rMG5b6L-0) with
-React, TypeScript, Vite and Tailwind CSS v4.
+React, TypeScript, Vite, Tailwind CSS v4 and TanStack Router.
 
 The page is static for now: there's no search, filtering or form logic yet.
 
