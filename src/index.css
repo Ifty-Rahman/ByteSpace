@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+
+/* Poppins — headings */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Satoshi — body text & labels */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Design tokens — taken from the ByteSpace Figma file (styles & variables).
+ * Colour names mirror the Figma palette so designers and devs speak the same language.
+ */
+@theme {
+  /* Typefaces */
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-brand: 'Clash Display', 'Poppins', ui-sans-serif, sans-serif;
+
+  /* Palette */
+  --color-persian-blue-800: #003be2;
+  --color-electric-lime-400: #d4fb20;
+  --color-electric-lime-500: #cbfc01;
+  --color-shuttle-gray-50: #f5f5f6;
+  --color-shuttle-gray-100: #e5e6e8;
+  --color-shuttle-gray-200: #ced0d3;
+  --color-shuttle-gray-400: #82868e;
+  --color-shuttle-gray-700: #4b4c53;
+  --color-shuttle-gray-950: #242528;
+  --color-black-700: #4f4f4f;
+  --color-ink: #040819;
+  --color-surface: #fafafa;
+  --color-track: #f6f6f6;
+  --color-thumbnail: #443131;
+  --color-chip-glass: rgb(246 246 246 / 0.6);
+
+  /* Type scale — Headings (Poppins) */
+  --text-heading-l: 72px;
+  --text-heading-l--line-height: 1.2;
+  --text-heading-l--letter-spacing: -0.01em;
+  --text-heading-m: 44px;
+  --text-heading-m--line-height: 1.2;
+  --text-heading-m--letter-spacing: -0.01em;
+  --text-heading-s: 36px;
+  --text-heading-s--line-height: 1.2;
+  --text-heading-s--letter-spacing: -0.01em;
+  --text-heading-xs: 20px;
+  --text-heading-xs--line-height: 1.2;
+  --text-heading-xs--letter-spacing: -0.01em;
+  --text-display-xs: 36px;
+  --text-display-xs--line-height: 44px;
+  --text-display-xs--letter-spacing: -0.01em;
+  --text-metric-l: 48px;
+  --text-metric-l--line-height: 1.2;
+  --text-metric-l--letter-spacing: -0.01em;
+  --text-metric-m: 24px;
+  --text-metric-m--line-height: 32px;
+  --text-metric-m--letter-spacing: -0.01em;
+
+  /* Type scale — Body (Satoshi Regular) */
+  --text-body-l: 18px;
+  --text-body-l--line-height: 1.6;
+  --text-body-m: 16px;
+  --text-body-m--line-height: 24px;
+  --text-body-s: 14px;
+  --text-body-s--line-height: 1.6;
+  --text-body-xs: 12px;
+  --text-body-xs--line-height: 1.6;
+  --text-body-2xs: 10px;
+  --text-body-2xs--line-height: 1.2;
+
+  /* Type scale — Labels (Satoshi Medium) */
+  --text-label-xl: 20px;
+  --text-label-xl--line-height: 1.2;
+  --text-label-l: 18px;
+  --text-label-l--line-height: 1.2;
+  --text-label-m: 16px;
+  --text-label-m--line-height: 1.2;
+  --text-label-s: 14px;
+  --text-label-s--line-height: 1.2;
+  --text-label-xs: 12px;
+  --text-label-xs--line-height: 20px;
+  --text-label-2xs: 10px;
+  --text-label-2xs--line-height: 20px;
+
+  /* Layout */
+  --container-page: 1200px;
+}
+
+/* "A" effect style from Figma — soft, layered shadow that follows the cut-out photos' shape. */
+@utility shadow-photo {
+  filter: drop-shadow(0.5px 0.7px 1.5px rgb(0 0 0 / 0.04))
+    drop-shadow(5.4px 7.7px 4.8px rgb(0 0 0 / 0.07))
+    drop-shadow(16.9px 24.2px 12px rgb(0 0 0 / 0.09))
+    drop-shadow(37.1px 53px 28px rgb(0 0 0 / 0.11))
+    drop-shadow(51px 72.9px 36px rgb(0 0 0 / 0.13));
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white font-body text-shuttle-gray-950;
+  }
+}

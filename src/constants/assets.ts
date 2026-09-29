@@ -1,0 +1,67 @@
+/**
+ * Static asset paths (served from /public/assets).
+ * Run `npm run assets` once to download the Figma exports into that folder.
+ */
+const root = '/assets'
+
+export const assets = {
+  brand: {
+    logoMark: `${root}/brand/logo-mark.svg`,
+  },
+  icons: {
+    search: `${root}/icons/search.svg`,
+    bag: `${root}/icons/bag.svg`,
+    star: `${root}/icons/star.svg`,
+    starOutline: `${root}/icons/star-outline.svg`,
+    signal: `${root}/icons/signal.svg`,
+    checkCircle: `${root}/icons/check-circle.svg`,
+    categoryDesign: `${root}/icons/category-design.svg`,
+    categoryDevelopment: `${root}/icons/category-development.svg`,
+    categoryIt: `${root}/icons/category-it.svg`,
+    categoryBusiness: `${root}/icons/category-business.svg`,
+    categoryMarketing: `${root}/icons/category-marketing.svg`,
+    categoryPhotography: `${root}/icons/category-photography.svg`,
+  },
+  decor: {
+    heroGrid: `${root}/decor/hero-grid.svg`,
+    ctaGrid: `${root}/decor/cta-grid.svg`,
+    heroRing: `${root}/decor/hero-ring.svg`,
+    glowBlueA: `${root}/decor/glow-blue-a.svg`,
+    glowBlueB: `${root}/decor/glow-blue-b.svg`,
+    glowBlueC: `${root}/decor/glow-blue-c.svg`,
+    glowLimeA: `${root}/decor/glow-lime-a.svg`,
+    glowLimeSm: `${root}/decor/glow-lime-sm.svg`,
+  },
+  images: {
+    heroStudent: `${root}/images/hero-student.png`,
+    creatorStudent: `${root}/images/creator-student.png`,
+    course: (n: number) => `${root}/images/courses/course-${n}.png`,
+  },
+  avatars: {
+    students: [1, 2, 3, 4, 5, 6, 7].map((n) => `${root}/images/avatars/student-${n}.png`),
+    learners: [1, 2, 3, 4].map((n) => `${root}/images/avatars/learner-${n}.png`),
+    sarah: `${root}/images/avatars/testimonial-sarah.png`,
+    james: `${root}/images/avatars/testimonial-james.png`,
+    alex: `${root}/images/avatars/testimonial-alex.png`,
+  },
+  partners: [1, 2, 3, 4, 5].map((n) => `${root}/logos/partner-${n}.svg`),
+  ornaments: {
+    springA: `${root}/ornaments/spring-a.png`,
+    springB: `${root}/ornaments/spring-b.png`,
+    torus: `${root}/ornaments/torus.png`,
+    cylinder: `${root}/ornaments/cylinder.png`,
+    cone: `${root}/ornaments/cone.png`,
+    coneAlt: `${root}/ornaments/cone-alt.png`,
+  },
+  ornamentMasks: {
+    springA330: `${root}/ornaments/masks/spring-a-330.png`,
+    springA215: `${root}/ornaments/masks/spring-a-215.png`,
+    springB385: `${root}/ornaments/masks/spring-b-385.png`,
+    springB215: `${root}/ornaments/masks/spring-b-215.png`,
+    springB175: `${root}/ornaments/masks/spring-b-175.png`,
+    torus342: `${root}/ornaments/masks/torus-342.png`,
+    cylinder370: `${root}/ornaments/masks/cylinder-370.png`,
+    cone188: `${root}/ornaments/masks/cone-188.png`,
+    coneAlt188: `${root}/ornaments/masks/cone-alt-188.png`,
+  },
+} as const
