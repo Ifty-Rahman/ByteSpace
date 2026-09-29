@@ -65,6 +65,8 @@
   --color-track: #f6f6f6;
   --color-thumbnail: #443131;
   --color-chip-glass: rgb(246 246 246 / 0.6);
+  --color-divider: #d1d1d1;
+  --color-muted: #888888;
 
   /* Type scale — Headings (Poppins) */
   --text-heading-l: 72px;

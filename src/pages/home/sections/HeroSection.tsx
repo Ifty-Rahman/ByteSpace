@@ -1,18 +1,20 @@
-import DesignCanvas from '../components/layout/DesignCanvas'
-import Ornament from '../components/ui/Ornament'
-import SearchBar from '../components/ui/SearchBar'
-import HappyStudentsCard from '../components/widgets/HappyStudentsCard'
-import LearningProgressCard from '../components/widgets/LearningProgressCard'
-import TopicHighlightCard from '../components/widgets/TopicHighlightCard'
-import { assets } from '../constants/assets'
-import { heroOrnaments } from '../data/landing'
+import DesignCanvas from '@/components/layout/DesignCanvas'
+import GridBackdrop from '@/components/layout/GridBackdrop'
+import Ornament from '@/components/ui/Ornament'
+import SearchBar from '@/components/ui/SearchBar'
+import HappyStudentsCard from '@/components/widgets/HappyStudentsCard'
+import LearningProgressCard from '@/components/widgets/LearningProgressCard'
+import TopicHighlightCard from '@/components/widgets/TopicHighlightCard'
+import { assets } from '@/constants/assets'
+import { heroOrnaments } from '../data'
 
 export default function HeroSection() {
   return (
     <section className="relative h-[1024px] overflow-hidden bg-persian-blue-800">
-      {/* Backdrop: grid lines + lime ring */}
+      <GridBackdrop />
+
+      {/* Lime ring behind the hero photo */}
       <DesignCanvas>
-        <img src={assets.decor.heroGrid} alt="" className="absolute top-0 left-0 h-[1024px] w-[1440px] max-w-none" />
         <img
           src={assets.decor.heroRing}
           alt=""

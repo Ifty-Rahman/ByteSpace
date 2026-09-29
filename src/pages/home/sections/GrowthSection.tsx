@@ -1,20 +1,26 @@
-import CourseCard from '../components/cards/CourseCard'
-import Container from '../components/layout/Container'
-import DesignCanvas from '../components/layout/DesignCanvas'
-import Glow from '../components/ui/Glow'
-import Ornament from '../components/ui/Ornament'
-import { RevenueCard, YearToDateCard } from '../components/widgets/EarningsCards'
-import HappyStudentsCard from '../components/widgets/HappyStudentsCard'
-import LearningProgressCard from '../components/widgets/LearningProgressCard'
-import { assets } from '../constants/assets'
-import { creatorBenefits, featuredCourses, growthStats } from '../data/landing'
+import CourseCard from '@/components/cards/CourseCard'
+import Container from '@/components/layout/Container'
+import DesignCanvas from '@/components/layout/DesignCanvas'
+import Glow from '@/components/ui/Glow'
+import Ornament from '@/components/ui/Ornament'
+import { RevenueCard, YearToDateCard } from '@/components/widgets/EarningsCards'
+import HappyStudentsCard from '@/components/widgets/HappyStudentsCard'
+import LearningProgressCard from '@/components/widgets/LearningProgressCard'
+import { assets } from '@/constants/assets'
+import { courses } from '@/data/courses'
+import { creatorBenefits, growthStats } from '../data'
 
 const headingClass = 'font-heading text-heading-m font-semibold text-shuttle-gray-950'
 
 function LearnersShowcase() {
   return (
     <div className="relative h-[552px] w-[621px] shrink-0">
-      <CourseCard course={featuredCourses[0]} learnersTone="blue" className="absolute top-0 left-0" />
+      <CourseCard
+        course={courses[0]}
+        learnersTone="blue"
+        variant="relaxed"
+        className="absolute top-0 left-0"
+      />
       <img
         src={assets.images.heroStudent}
         alt="Student learning online"

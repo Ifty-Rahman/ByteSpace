@@ -1,5 +1,5 @@
 import type { FormEvent } from 'react'
-import { assets } from '../../constants/assets'
+import { assets } from '@/constants/assets'
 import Button from './Button'
 
 export default function SearchBar() {

@@ -1,19 +1,27 @@
-import { assets } from '../../constants/assets'
-import { cn } from '../../utils/cn'
-import AvatarStack from '../ui/AvatarStack'
+import AvatarStack from '@/components/ui/AvatarStack'
+import StarIcon from '@/components/ui/StarIcon'
+import { assets } from '@/constants/assets'
+import { cn } from '@/utils/cn'
 import FloatingCard from './FloatingCard'
 
 interface HappyStudentsCardProps {
-  /** The hero uses a slightly larger rating line than the feature section. */
+  /** The hero uses a slightly larger rating line than the other placements. */
   variant?: 'hero' | 'compact'
+  /** `accent` is the lime card used on the auth pages. */
+  tone?: 'light' | 'accent'
   className?: string
 }
 
-export default function HappyStudentsCard({ variant = 'hero', className }: HappyStudentsCardProps) {
+export default function HappyStudentsCard({
+  variant = 'hero',
+  tone = 'light',
+  className,
+}: HappyStudentsCardProps) {
   const isHero = variant === 'hero'
+  const isAccent = tone === 'accent'
 
   return (
-    <FloatingCard className={cn('w-[258px] justify-center', className)}>
+    <FloatingCard tone={tone} className={cn('w-[258px] justify-center', className)}>
       <div>
         <p className={cn('text-label-m font-medium', !isHero && 'leading-6')}>Happy Students</p>
         <p className="flex items-center">
@@ -26,13 +34,7 @@ export default function HappyStudentsCard({ variant = 'hero', className }: Happy
             <span className={cn('text-shuttle-gray-950', !isHero && 'font-bold')}>4.5 </span>
             (240)
           </span>
-          <span className="relative size-4 shrink-0">
-            <img
-              src={assets.icons.star}
-              alt=""
-              className="absolute top-[6.92%] right-[8.87%] bottom-[14.53%] left-[8.87%]"
-            />
-          </span>
+          <StarIcon tone={isAccent ? 'blue' : 'lime'} />
         </p>
       </div>
       <AvatarStack
@@ -40,6 +42,7 @@ export default function HappyStudentsCard({ variant = 'hero', className }: Happy
         size={43}
         overlap={16}
         moreLabel="2K+"
+        moreTone={isAccent ? 'dark' : 'lime'}
         moreClassName="text-xs leading-[1.5] font-bold"
       />
     </FloatingCard>

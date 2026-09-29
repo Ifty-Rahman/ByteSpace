@@ -1,7 +1,7 @@
 import type { FormEvent } from 'react'
-import { footerColumns, legalLinks } from '../../data/landing'
-import Button from '../ui/Button'
-import Logo from '../ui/Logo'
+import { footerColumns, legalLinks } from '@/constants/navigation'
+import Button from '@/components/ui/Button'
+import Logo from '@/components/ui/Logo'
 import Container from './Container'
 
 export default function Footer() {

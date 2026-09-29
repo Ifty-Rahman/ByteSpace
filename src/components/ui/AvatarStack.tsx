@@ -1,4 +1,11 @@
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
+
+const MORE_TONES = {
+  lime: 'bg-electric-lime-400 text-shuttle-gray-950',
+  blue: 'bg-persian-blue-800 text-white',
+  dark: 'bg-shuttle-gray-950 text-white',
+  black: 'bg-black text-white',
+} as const
 
 interface AvatarStackProps {
   avatars: readonly string[]
@@ -8,6 +15,9 @@ interface AvatarStackProps {
   overlap: number
   /** Text in the trailing "more" bubble, e.g. "2K+". */
   moreLabel: string
+  /** Colour of the "more" bubble. */
+  moreTone?: keyof typeof MORE_TONES
+  /** Typography for the "more" label. */
   moreClassName?: string
 }
 
@@ -16,6 +26,7 @@ export default function AvatarStack({
   size,
   overlap,
   moreLabel,
+  moreTone = 'lime',
   moreClassName,
 }: AvatarStackProps) {
   const dimension = { width: size, height: size }
@@ -33,7 +44,8 @@ export default function AvatarStack({
       ))}
       <span
         className={cn(
-          'flex shrink-0 items-center justify-center rounded-full bg-electric-lime-400 text-shuttle-gray-950',
+          'flex shrink-0 items-center justify-center rounded-full',
+          MORE_TONES[moreTone],
           moreClassName,
         )}
         style={dimension}

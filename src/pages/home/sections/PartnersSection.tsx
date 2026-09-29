@@ -1,4 +1,4 @@
-import { partners } from '../data/landing'
+import { partners } from '../data'
 
 export default function PartnersSection() {
   return (

@@ -12,6 +12,9 @@ export const assets = {
     search: `${root}/icons/search.svg`,
     bag: `${root}/icons/bag.svg`,
     star: `${root}/icons/star.svg`,
+    starBlue: `${root}/icons/star-blue.svg`,
+    facebook: `${root}/icons/facebook.svg`,
+    google: `${root}/icons/google.svg`,
     starOutline: `${root}/icons/star-outline.svg`,
     signal: `${root}/icons/signal.svg`,
     checkCircle: `${root}/icons/check-circle.svg`,
@@ -23,8 +26,8 @@ export const assets = {
     categoryPhotography: `${root}/icons/category-photography.svg`,
   },
   decor: {
-    heroGrid: `${root}/decor/hero-grid.svg`,
-    ctaGrid: `${root}/decor/cta-grid.svg`,
+    /** 1440 × 1024 line grid used on every blue area (see GridBackdrop). */
+    grid: `${root}/decor/grid.svg`,
     heroRing: `${root}/decor/hero-ring.svg`,
     glowBlueA: `${root}/decor/glow-blue-a.svg`,
     glowBlueB: `${root}/decor/glow-blue-b.svg`,

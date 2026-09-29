@@ -1,8 +1,29 @@
-import { assets } from '../../constants/assets'
-import { accountNav, primaryNav } from '../../data/landing'
-import { cn } from '../../utils/cn'
-import Logo from '../ui/Logo'
+import { Link } from '@tanstack/react-router'
+import { assets } from '@/constants/assets'
+import { accountNav, primaryNav, type NavItem } from '@/constants/navigation'
+import Logo from '@/components/ui/Logo'
 import Container from './Container'
+
+/** Renders a route link for `to`, a plain anchor for `href`. */
+function NavLink({ item, className }: { item: NavItem; className?: string }) {
+  if (item.to) {
+    return (
+      <Link
+        to={item.to}
+        className={className}
+        activeOptions={{ exact: true, includeHash: false }}
+        activeProps={{ 'aria-current': 'page' }}
+      >
+        {item.label}
+      </Link>
+    )
+  }
+  return (
+    <a href={item.href} className={className}>
+      {item.label}
+    </a>
+  )
+}
 
 export default function Header() {
   return (
@@ -15,25 +36,21 @@ export default function Header() {
           className="absolute top-1/2 left-[calc(50%-0.5px)] -translate-x-1/2 -translate-y-1/2"
         >
           <ul className="flex items-start gap-6 whitespace-nowrap text-shuttle-gray-50">
-            {primaryNav.map(({ label, href, active }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  aria-current={active ? 'page' : undefined}
-                  className={cn(active ? 'text-label-m font-medium' : 'text-base leading-[1.6]')}
-                >
-                  {label}
-                </a>
+            {primaryNav.map((item) => (
+              <li key={item.label}>
+                {/* The current page is shown in the medium weight, as in the design. */}
+                <NavLink
+                  item={item}
+                  className="text-base leading-[1.6] aria-[current=page]:text-label-m aria-[current=page]:font-medium"
+                />
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="absolute top-12 right-0 flex items-start gap-6 whitespace-nowrap text-body-m text-shuttle-gray-50">
-          {accountNav.map(({ label, href }) => (
-            <a key={label} href={href}>
-              {label}
-            </a>
+          {accountNav.map((item) => (
+            <NavLink key={item.label} item={item} />
           ))}
           <button type="button" aria-label="Cart" className="size-6">
             <img src={assets.icons.bag} alt="" className="size-6" />

@@ -1,4 +1,4 @@
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
 
 interface ProgressBarProps {
   /** 0–100 */
