@@ -1,8 +1,9 @@
-import CourseCard from '../components/cards/CourseCard'
-import Container from '../components/layout/Container'
-import SectionHeading from '../components/ui/SectionHeading'
-import TopicChip from '../components/ui/TopicChip'
-import { activeTopic, courseTopicRows, featuredCourses } from '../data/landing'
+import CourseCard from '@/components/cards/CourseCard'
+import Container from '@/components/layout/Container'
+import SectionHeading from '@/components/ui/SectionHeading'
+import TopicChip from '@/components/ui/TopicChip'
+import { courses } from '@/data/courses'
+import { activeTopic, courseTopicRows } from '../data'
 
 export default function CoursesSection() {
   const lastRow = courseTopicRows.length - 1
@@ -34,7 +35,7 @@ export default function CoursesSection() {
 
         {/* Course grid */}
         <div className="mt-[77px] grid grid-cols-[repeat(3,373px)] gap-10">
-          {featuredCourses.map((course) => (
+          {courses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>

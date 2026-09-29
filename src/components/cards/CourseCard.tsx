@@ -1,17 +1,44 @@
-import { assets } from '../../constants/assets'
-import type { Course } from '../../types'
-import { cn } from '../../utils/cn'
-import AvatarStack from '../ui/AvatarStack'
+import { assets } from '@/constants/assets'
+import type { Course } from '@/types'
+import { cn } from '@/utils/cn'
+import AvatarStack from '@/components/ui/AvatarStack'
+import StarIcon from '@/components/ui/StarIcon'
+
+const TEXT_STYLES = {
+  default: {
+    chip: 'text-xs leading-[1.2]',
+    title: 'text-heading-xs',
+    byline: 'text-body-xs',
+    rating: 'text-body-l',
+  },
+  relaxed: {
+    chip: 'text-label-xs',
+    title: 'text-heading-xs leading-7',
+    byline: 'text-xs leading-5',
+    rating: 'text-lg leading-7',
+  },
+} as const
 
 interface CourseCardProps {
   course: Course
   /** Colour of the trailing "26+" learners bubble. */
-  learnersTone?: 'lime' | 'blue'
+  learnersTone?: 'lime' | 'blue' | 'black'
+  /** Outlined grey star (home) or filled lime star (auth showcase). */
+  ratingStar?: 'outline' | 'filled'
+  /** `relaxed` uses the roomier 20/28px line heights of the feature and auth placements. */
+  variant?: keyof typeof TEXT_STYLES
   className?: string
 }
 
-export default function CourseCard({ course, learnersTone = 'lime', className }: CourseCardProps) {
+export default function CourseCard({
+  course,
+  learnersTone = 'lime',
+  ratingStar = 'outline',
+  variant = 'default',
+  className,
+}: CourseCardProps) {
   const meta = [course.lessons, course.duration, course.comments]
+  const text = TEXT_STYLES[variant]
 
   return (
     <article
@@ -31,7 +58,10 @@ export default function CourseCard({ course, learnersTone = 'lime', className }:
           {meta.map((item) => (
             <li
               key={item}
-              className="rounded-3xl bg-chip-glass px-3 py-1.5 text-xs leading-[1.2] font-medium whitespace-nowrap text-black-700 backdrop-blur-[4px]"
+              className={cn(
+                'rounded-3xl bg-chip-glass px-3 py-1.5 font-medium whitespace-nowrap text-black-700 backdrop-blur-[4px]',
+                text.chip,
+              )}
             >
               {item}
             </li>
@@ -42,16 +72,23 @@ export default function CourseCard({ course, learnersTone = 'lime', className }:
       <div className="mt-[20.855px] flex items-start justify-between">
         <div className="flex min-w-0 flex-col gap-4">
           <div>
-            <h3 className="max-w-[280px] truncate font-heading text-heading-xs font-semibold text-black">
+            <h3
+              className={cn('max-w-[280px] truncate font-heading font-semibold text-black', text.title)}
+            >
               {course.title}
             </h3>
-            <p className="text-body-xs text-black-700">
+            <p className={cn('text-black-700', text.byline)}>
               by <span className="text-persian-blue-800">{course.author}</span>
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1 rounded-3xl bg-shuttle-gray-50 px-3 py-1.5 text-xs leading-[1.2] font-medium text-shuttle-gray-700">
+            <span
+              className={cn(
+                'flex items-center gap-1 rounded-3xl bg-shuttle-gray-50 px-3 py-1.5 font-medium text-shuttle-gray-700',
+                text.chip,
+              )}
+            >
               <img src={assets.icons.signal} alt="" className="size-5" />
               {course.level}
             </span>
@@ -60,10 +97,8 @@ export default function CourseCard({ course, learnersTone = 'lime', className }:
               size={32}
               overlap={8}
               moreLabel={course.learnersMore}
-              moreClassName={cn(
-                'text-label-xs font-medium',
-                learnersTone === 'blue' && 'bg-persian-blue-800 text-white',
-              )}
+              moreTone={learnersTone}
+              moreClassName="text-label-xs font-medium"
             />
           </div>
 
@@ -75,9 +110,13 @@ export default function CourseCard({ course, learnersTone = 'lime', className }:
           </p>
         </div>
 
-        <p className="flex shrink-0 items-center text-body-l text-black-700">
+        <p className={cn('flex shrink-0 items-center text-black-700', text.rating)}>
           <span className="whitespace-pre">{`${course.rating} `}</span>
-          <img src={assets.icons.starOutline} alt="" className="size-6" />
+          {ratingStar === 'outline' ? (
+            <img src={assets.icons.starOutline} alt="" className="size-6" />
+          ) : (
+            <StarIcon className="size-6" />
+          )}
           <span className="sr-only">out of 5 stars</span>
         </p>
       </div>

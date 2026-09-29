@@ -1,10 +1,11 @@
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
 
 interface SectionHeadingProps {
   title: string
   description: string
   size?: 'm' | 's'
   titleClassName?: string
+  descriptionClassName?: string
   className?: string
 }
 
@@ -14,6 +15,7 @@ export default function SectionHeading({
   description,
   size = 'm',
   titleClassName,
+  descriptionClassName,
   className,
 }: SectionHeadingProps) {
   return (
@@ -27,7 +29,7 @@ export default function SectionHeading({
       >
         {title}
       </h2>
-      <p className="text-body-l text-shuttle-gray-400">{description}</p>
+      <p className={cn('text-body-l text-shuttle-gray-400', descriptionClassName)}>{description}</p>
     </div>
   )
 }

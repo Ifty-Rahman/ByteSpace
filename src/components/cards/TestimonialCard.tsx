@@ -1,4 +1,4 @@
-import type { Testimonial } from '../../types'
+import type { Testimonial } from '@/types'
 
 export default function TestimonialCard({ name, role, quote, avatar }: Testimonial) {
   return (

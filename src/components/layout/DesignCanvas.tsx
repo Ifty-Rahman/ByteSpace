@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
 
 interface DesignCanvasProps {
   children: ReactNode
@@ -15,7 +15,7 @@ export default function DesignCanvas({ children, className }: DesignCanvasProps)
   return (
     <div
       className={cn(
-        'pointer-events-none absolute inset-y-0 left-1/2 w-[1440px] -translate-x-1/2',
+        'pointer-events-none absolute inset-y-0 left-1/2 w-360 -translate-x-1/2',
         className,
       )}
     >

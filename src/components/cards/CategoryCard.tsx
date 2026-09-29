@@ -1,4 +1,4 @@
-import type { Category } from '../../types'
+import type { Category } from '@/types'
 
 export default function CategoryCard({ label, icon }: Category) {
   return (

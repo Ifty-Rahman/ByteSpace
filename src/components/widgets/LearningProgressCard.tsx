@@ -1,4 +1,4 @@
-import ProgressBar from '../ui/ProgressBar'
+import ProgressBar from '@/components/ui/ProgressBar'
 import FloatingCard from './FloatingCard'
 
 interface LearningProgressCardProps {

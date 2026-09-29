@@ -1,15 +1,13 @@
-import DesignCanvas from '../components/layout/DesignCanvas'
-import Button from '../components/ui/Button'
-import Ornament from '../components/ui/Ornament'
-import { assets } from '../constants/assets'
-import { ctaOrnaments } from '../data/landing'
+import DesignCanvas from '@/components/layout/DesignCanvas'
+import GridBackdrop from '@/components/layout/GridBackdrop'
+import Button from '@/components/ui/Button'
+import Ornament from '@/components/ui/Ornament'
+import { ctaOrnaments } from '../data'
 
 export default function CreatorCtaSection() {
   return (
     <section className="relative h-[488px] overflow-hidden bg-persian-blue-800">
-      <DesignCanvas>
-        <img src={assets.decor.ctaGrid} alt="" className="absolute top-0 left-0 h-[1024px] w-[1440px] max-w-none" />
-      </DesignCanvas>
+      <GridBackdrop />
 
       <div className="relative flex h-full items-center justify-center pt-px">
         <div className="flex w-[964px] flex-col items-center gap-10 text-center text-shuttle-gray-50">

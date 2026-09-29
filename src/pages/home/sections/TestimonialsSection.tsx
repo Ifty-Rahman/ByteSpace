@@ -1,8 +1,8 @@
-import TestimonialCard from '../components/cards/TestimonialCard'
-import DesignCanvas from '../components/layout/DesignCanvas'
-import Glow from '../components/ui/Glow'
-import { assets } from '../constants/assets'
-import { testimonials } from '../data/landing'
+import TestimonialCard from '@/components/cards/TestimonialCard'
+import DesignCanvas from '@/components/layout/DesignCanvas'
+import Glow from '@/components/ui/Glow'
+import { assets } from '@/constants/assets'
+import { testimonials } from '../data'
 
 export default function TestimonialsSection() {
   return (

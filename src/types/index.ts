@@ -1,9 +1,3 @@
-export interface NavLink {
-  label: string
-  href: string
-  active?: boolean
-}
-
 export interface Course {
   id: string
   title: string

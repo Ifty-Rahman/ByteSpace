@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react'
-import type { OrnamentConfig } from '../../types'
-import { cn } from '../../utils/cn'
+import type { OrnamentConfig } from '@/types'
+import { cn } from '@/utils/cn'
 
 const TINTS = {
   lime: 'bg-electric-lime-400',
