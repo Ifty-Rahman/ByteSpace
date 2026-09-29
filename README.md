@@ -10,7 +10,6 @@ The page is static for now: there's no search, filtering or form logic yet.
 
 ```bash
 npm install
-npm run assets   # one-off: downloads the Figma images/icons into public/assets
 npm run dev
 ```
 
